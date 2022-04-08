@@ -7,7 +7,7 @@ import { AddPollUseCase } from '../../domain/use-cases/add-poll.use-case';
 import { PollRoutes } from '../routing/poll-routes';
 
 @Component({
-  selector: 'new-poll',
+  selector: 'poll-new',
   styleUrls: ['./new-poll.component.sass'],
   templateUrl: './new-poll.component.html'
 })

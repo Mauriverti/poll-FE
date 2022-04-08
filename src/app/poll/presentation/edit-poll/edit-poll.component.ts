@@ -8,7 +8,7 @@ import { EditPollUseCase } from '../../domain/use-cases/edit-poll.use-case';
 import { LoadPollUseCase } from '../../domain/use-cases/load-poll.use-case';
 
 @Component({
-  selector: 'edit-poll',
+  selector: 'poll-edit',
   styleUrls: ['./edit-poll.component.sass'],
   templateUrl: './edit-poll.component.html'
 })

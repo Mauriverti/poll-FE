@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Vote } from 'src/app/poll/domain/models/vote';
 
 @Component({
-  selector: 'vote-poll-list-item',
+  selector: 'poll-vote-list-item',
   templateUrl: 'vote-poll-list-item.component.html'
 })
 export class VotePollListItemComponent {

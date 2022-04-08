@@ -10,7 +10,7 @@ import { LoadPollUseCase } from '../../domain/use-cases/load-poll.use-case';
 import { LoadVotesUseCase } from '../../domain/use-cases/load-votes.use-case';
 
 @Component({
-  selector: 'edit-vote',
+  selector: 'poll-edit-vote',
   styleUrls: ['./edit-vote.component.sass'],
   templateUrl: 'edit-vote.component.html'
 })

@@ -11,7 +11,7 @@ import { LoadPollUseCase } from '../../domain/use-cases/load-poll.use-case';
 import { VoteUseCase } from '../../domain/use-cases/vote.use-case';
 
 @Component({
-  selector: 'vote-poll',
+  selector: 'poll-vote',
   styleUrls: ['./vote-poll.component.sass'],
   templateUrl: './vote-poll.component.html'
 })
