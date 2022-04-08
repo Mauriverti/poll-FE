@@ -1,0 +1,25 @@
+<div fxLayout='row' fxLayoutAlign='end center'>
+  <button mat-raised-button color='primary' (click)=newPoll()>New Poll</button>
+</div>
+
+<div *ngIf='(polls$ | async) as polls; else loading'>
+  <div *ngIf='polls.length; else empty'>
+    <poll-created-list-item
+    *ngFor='let poll of polls'
+    [poll]=poll
+    (deletePoll)=delete(poll)
+    (editPoll)=edit(poll)
+    (votePoll)=vote(poll)
+    (sharePoll)=share(poll)
+    (resultsPoll)=toResult(poll);
+    ></poll-created-list-item>
+  </div>
+
+  <ng-template #empty>
+    <span>You didn't create any poll yet</span>
+  </ng-template>
+</div>
+
+<ng-template #loading>
+  <span>Loading...</span>
+</ng-template>

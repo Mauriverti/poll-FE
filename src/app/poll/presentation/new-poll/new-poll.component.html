@@ -1,0 +1,43 @@
+<div class='container'>
+  <h3>Create new poll</h3>
+
+  <form [formGroup]='newPoll' fxLayout='column' fxLayoutGap='8px'>
+    <div fxLayout='row' fxLayoutAlign='space-between center' >
+      <mat-form-field fxFlex='83'>
+        <mat-label>Title</mat-label>
+        <input type='text' matInput formControlName='title'>
+      </mat-form-field>
+
+      <div fxFlex='15' fxLayoutGap='6px'>
+        <span>Public?</span>
+        <mat-slide-toggle color='primary' formControlName='publicPoll'></mat-slide-toggle>
+      </div>
+    </div>
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <input type='text' matInput formControlName='description'>
+    </mat-form-field>
+
+    <ng-container formArrayName='options'>
+      <h3>Options</h3>
+      <mat-form-field *ngFor='let control of options.controls; index as i'>
+        <mat-label>Add Option</mat-label>
+        <input type='text' matInput [formControlName]='i'>
+        <button mat-button matSuffix mat-icon-button aria-label='Clear' (click)='removeOption(i)' matTooltip='Remove'>
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+      <div>
+        <button mat-stroked-button color='primary' (click)='addOption()'>
+          <span>Add Option</span>
+        </button>
+      </div>
+    </ng-container>
+  </form>
+
+  <div fxLayoutGap='8px' fxLayoutAlign='center center'>
+    <button mat-raised-button color='primary' (click)=addPoll(newPoll)>Create</button>
+    <button mat-stroked-button color='primary' (click)=toList()>Go Back</button>
+  </div>
+
+</div>
