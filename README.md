@@ -1,5 +1,8 @@
 # Poll
 
+This is a front end app for [Poll-service](https://github.com/Mauriverti/poll-service).
+It was developed in Angular. It's using Jasmine and Karma for tests
+
 ## Install dependencies
 
 At terminal, navigate to the project folder, then run `npm ci` to download all the project dependencies.
